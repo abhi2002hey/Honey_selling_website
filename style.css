@@ -324,3 +324,29 @@ header.sticky{
     border-radius: 3rem;
     transition: all .50s ease;
 }
+
+.in-text .x-btnn a:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: #ff9f0d 0px 1px 25px;
+}
+
+.top-icon{
+    position: absolure;
+    top: 30px;
+    right: 35px;
+}
+
+.top-icon i{
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.row-btn{
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.row img:hover{
+    transform: scale(1.1);
+}
