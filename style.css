@@ -403,3 +403,59 @@ header.sticky{
     margin-right: 5px;
 }
 
+.contact-content{
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.contact-img{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 5rem;   
+}
+
+.contact-img img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: all .50s ease;
+}
+.contact-img img:hover{
+    transform: scale(0.9);
+}
+.contact-text{
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+.contact-text h2{
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+}
+.contact-text p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    max-width: 950px;
+    margin-bottom: 3rem;
+}
+
+.social i{
+    font-size: 32px;
+    display: inline-block;
+    color: var(--second-color);
+    margin: 0 20px;
+    transition: all .50s ease;
+}
+.social .clr i{
+    color: var(--main-color);
+}
+.social i:hover{
+    color: var(--main-color);
+}
