@@ -426,7 +426,7 @@ header.sticky{
     transition: all .50s ease;
 }
 .contact-img img:hover{
-    transform: scale(0.9);
+    transform: scale(1.1);
 }
 .contact-text{
     text-align: center;
@@ -462,13 +462,13 @@ header.sticky{
 .details{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
     gap: 3rem;
 }
 
 .main-d a{
     display: flex;
-    align-items: center;
+    justify-content: center;
     color: var(--text-color);
     font-size: 20px;
     font-weight: 600;
