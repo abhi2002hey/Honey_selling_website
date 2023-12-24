@@ -37,6 +37,7 @@
       <div class="nav-icons">
         <a href="#"><i class="bx bx-search"></i></a>
         <a href="#"><i class="bx bx-cart"></i></a>
+        <a href="cart.html"><i class="bx bx-cart"></i></a>
         <div class="bx bx-menu" id="menu-icon"></div>
       </div>
     </header>
@@ -118,7 +119,7 @@
         <div class="row">
           <img src="img/p1.png" />
 
-          <h3>Blueberry Honey</h3>
+          <h3>Red Honey</h3>
 
           <p>It is a long established fact that a reader</p>
 
@@ -162,7 +163,7 @@
           <div class="row">
             <img src="img/p3.png" />
   
-            <h3>Blueberry Honey</h3>
+            <h3>hornet Honey</h3>
   
             <p>It is a long established fact that a reader</p>
   
@@ -184,13 +185,13 @@
           <div class="row">
             <img src="img/p4.png" />
   
-            <h3>Blueberry Honey</h3>
+            <h3>Green Honey</h3>
   
             <p>It is a long established fact that a reader</p>
   
             <div class="in-text">
               <div class="price">
-                <h6>$21.00</h6>
+                <h6>$50.00</h6>
               </div>
   
               <div class="s-btnn">
@@ -338,6 +339,92 @@
     <a href="#" class="scroll">
       <i class='bx bx-up-arrow-alt'></i>
     </a>
+
+    <!-- cart -->
+<div class="cart-container">
+  <div class="cart-icon">
+    <i class="bx bx-cart"></i>
+    <span class="cart-count">0</span>
+  </div>
+
+  <div class="cart-dropdown">
+    <ul class="cart-items"></ul>
+    <div class="cart-total">
+      <span>Total:</span>
+      <span class="total-amount">$0.00</span>
+    </div>
+    <a href="#" class="checkout-btn">Checkout</a>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const cartIcon = document.querySelector('.cart-icon');
+    const cartCount = document.querySelector('.cart-count');
+    const cartItems = document.querySelector('.cart-items');
+    const totalAmount = document.querySelector('.total-amount');
+
+    let cart = [];
+
+    function updateCart() {
+      // Update the cart icon count
+      cartCount.innerText = cart.length;
+
+      // Clear the cart items list
+      cartItems.innerHTML = '';
+
+      // Calculate total amount
+      let total = 0;
+
+      // Display items in the cart
+      cart.forEach((item) => {
+        const li = document.createElement('li');
+        li.innerText = `${item.name} - $${item.price.toFixed(2)}`;
+        cartItems.appendChild(li);
+
+        total += item.price;
+      });
+
+      // Update total amount
+      totalAmount.innerText = `$${total.toFixed(2)}`;
+    }
+
+    // Add event listener for the "Order now" buttons
+    const orderButtons = document.querySelectorAll('.s-btnn a');
+    orderButtons.forEach((button, index) => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Get product details
+        const productName = document.querySelectorAll('.row h3')[index].innerText;
+        const productPrice = parseFloat(document.querySelectorAll('.row .price h6')[index].innerText.replace('$', ''));
+
+        // Add product to cart
+        cart.push({
+          name: productName,
+          price: productPrice,
+        });
+
+        // Update the cart
+        updateCart();
+      });
+    });
+
+    // Toggle cart dropdown
+    cartIcon.addEventListener('click', function () {
+      const cartDropdown = document.querySelector('.cart-dropdown');
+      cartDropdown.classList.toggle('show');
+    });
+
+    // Close cart dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+      const cartDropdown = document.querySelector('.cart-dropdown');
+      if (!cartIcon.contains(event.target) && !cartDropdown.contains(event.target)) {
+        cartDropdown.classList.remove('show');
+      }
+    });
+  });
+</script>
+
 
     <!-- link to JS -->
     <script src="script.js"></script>
