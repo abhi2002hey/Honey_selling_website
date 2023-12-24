@@ -350,3 +350,56 @@ header.sticky{
 .row img:hover{
     transform: scale(1.1);
 }
+
+.review-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.box{
+    padding: 35px ;
+    background: var(--other-color);
+    border-radius: 3rem;
+}
+
+.box p{
+    font-size: var(--p-font);
+    color: var(--second-color);
+    margin-bottom: 1.5rem;
+    line-height: 30px;
+}
+
+.in-box{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.bx-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 3rem;
+}
+
+.bxx-text h4{
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.bxx-text h5{
+    font-size: 14px;
+    color: var(--second-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.rating{
+    color:var(--main-color);
+    font-size: 18px;
+    margin-right: 5px;
+}
+
