@@ -418,7 +418,6 @@ header.sticky{
     gap: 4rem;
     margin-bottom: 5rem;   
 }
-
 .contact-img img{
     width: 100%;
     max-width: 200px;
@@ -447,8 +446,8 @@ header.sticky{
 }
 
 .social i{
-    font-size: 32px;
     display: inline-block;
+    font-size: 32px;
     color: var(--second-color);
     margin: 0 20px;
     transition: all .50s ease;
@@ -458,4 +457,161 @@ header.sticky{
 }
 .social i:hover{
     color: var(--main-color);
+}
+
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.main-d a{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+.main-d i{
+    vertical-align: middle;
+    margin-right: 12px;
+    font-size: 28px;
+    color: var(--main-color);
+}
+.scroll{
+    position: fixed;
+    bottom: 2.2rem;
+    border-top: 2rem;
+    right: 3.2rem;
+}
+.scroll i {
+    font-size: 22px;
+    color: var(--text-color);
+    background: var(--main-color);
+    padding: 10px;
+    border-radius: 2rem;
+}
+
+@media (max-width: 1545px){
+    header{
+        padding: 22px 4%;
+        transition: .2s;
+    }
+    header.sticky{
+        padding: 14px 4%;
+        transition: .2s;
+    }
+    section{
+        padding: 50px 4% 40px;
+        transition: .2s;
+    }
+    .container{
+        padding: 30px 4% 50px;
+    }
+
+}
+@media (max-width: 1180px){
+   :root{
+    --big-font: 4rem;
+    --h2-font: 2.2rem;
+    --p-font: 15px;
+   }
+   .home{
+    height: 85vh;
+   }
+}
+@media (max-width: 1060px){
+#menu-icon{
+    display: initial;
+}
+.navlist{
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: var(--other-color);
+    transition: all .50s ease;
+}
+.navlist a{
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-left: 2px solid var(--main-color);
+}
+.navlist.open{
+    top: 100%;
+}
+}
+@media (max-width: 1045px){
+    :root{
+        --big-font: 3.3rem;
+        --h2-font: 2rem;
+       }
+    .home-img img{
+        width: 100%;
+        max-width: 490px;
+        height: auto;
+    }
+    .about-img img{
+        width: 100%;
+        max-width: 490px;
+        height: auto;
+    }
+    .home{
+        height: 70vh;
+    }
+}
+@media (max-width: 860px){
+    .home{
+        grid-template-columns: 1fr;
+        height: 118vh;
+    }
+    .home-text{
+        padding-top: 60px;
+    }
+    .home-img{
+        text-align: center;
+    }
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about-img{
+        text-align: center;
+    }
+}
+@media (max-width: 520px){
+.contact-img{
+    gap: 1.5rem;
+}
+.contact-img img{
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+}
+.social i{
+    margin: 0 10px;
+}
+.contact-text p{
+    max-width: 100px;
+}
+.details{
+    gap: 1.5rem;
+}
+}
+@media (max-width: 475px){
+    :root{
+        --big-font: 2.8rem;
+        --h2-font: 2rem;
+    }
+
+}
+@media (max-width: 440px){
+    .home{
+        height: 110vh;
+        gap: 0.1rem;
+    }
 }
