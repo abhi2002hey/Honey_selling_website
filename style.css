@@ -1,3 +1,4 @@
+/* universal selector */
 *{
     padding: 0;
     margin: 0;
@@ -8,6 +9,7 @@
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
 }
+/* pseudo class selector */
 :root{
     --main-color: #ff9f0d;
     --text-color: #fff;
